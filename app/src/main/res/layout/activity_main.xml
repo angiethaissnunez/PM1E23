@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/imageNameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingres Nombre aqui"
+        android:maxLength="25"
+        android:textColor="@android:color/holo_green_dark"
+        android:textColorHint="@android:color/holo_green_dark"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="411dp"
+        android:layout_height="354dp"
+        android:layout_below="@+id/imageNameET"
+        android:layout_marginTop="24dp"
+        android:onClick="chooseImage"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mood"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="394dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/image"
+        android:background="@android:color/holo_green_dark"
+        android:onClick="storeImage"
+        android:text="Guardar Imagen"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageNameET" />
+
+    <Button
+        android:id="@+id/mostrarActivity"
+        android:layout_width="392dp"
+        android:layout_height="42dp"
+        android:layout_below="@+id/image"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_green_dark"
+        android:onClick="moveToShowActivity"
+        android:text="Mostrar Imagenes"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuardar"
+        tools:layout_editor_absoluteX="11dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
